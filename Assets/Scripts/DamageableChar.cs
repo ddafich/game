@@ -150,7 +150,7 @@ public class DamageableChar : MonoBehaviour, IDamagable
             {
                 InstantiateLoot(lootItem.itemPrefab);
             }
-            break;
+            
         }
     }
 

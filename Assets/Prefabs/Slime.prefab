@@ -218,9 +218,9 @@ MonoBehaviour:
   currentCoin: 0
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
-    dropChance: 75
+    dropChance: 100
   - itemPrefab: {fileID: 4370298451464061620, guid: 408de397d35022a4e857a1962d585b18, type: 3}
-    dropChance: 40
+    dropChance: 25
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}

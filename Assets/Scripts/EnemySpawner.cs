@@ -1,27 +1,37 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    
+
     public Transform[] spawnPoints;
     public int enemiesPerWave = 5;
     public float timeBetweenWaves = 5f;
     public float spawnDelay = 1f;
+    public bool isCleared;
 
+    private int maxWave = 3;
     private int waveNumber = 0;
     private int enemiesAlive = 0;
     private int enemiesSpawned = 0; // Tracks how many have spawned
     private bool isSpawning = false;
 
-    void Start()
-    {
-        StartCoroutine(StartWave());
-    }
 
+    
+    public void StartSpawning()
+    {
+        if (!isSpawning)
+        {
+            StartCoroutine(StartWave());
+        }
+    }
     IEnumerator StartWave()
     {
         isSpawning = true;
+        isCleared = false;
         waveNumber++;
         enemiesAlive = 0; // Reset count to be updated properly
         enemiesSpawned = 0;
@@ -70,6 +80,17 @@ public class EnemySpawner : MonoBehaviour
     {
         Debug.Log("Wave " + waveNumber + " completed. Next wave in " + timeBetweenWaves + " seconds...");
         yield return new WaitForSeconds(timeBetweenWaves);
-        StartCoroutine(StartWave());
+
+        if (waveNumber < maxWave)
+        {
+            StartCoroutine(StartWave());
+        }
+        else
+        {
+            isCleared = true;
+            Debug.Log("area cleared");
+        }
+
     }
+    
 }
