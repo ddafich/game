@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     
 
     public Transform[] spawnPoints;
@@ -52,7 +52,8 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+        GameObject randEnemy = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
+        GameObject enemy = Instantiate(randEnemy, spawnPoint.position, Quaternion.identity);
         enemy.GetComponent<Enemy>().damage = 1f + (waveNumber * 0.5f);
         enemy.GetComponent<Enemy>().knockbackForce += waveNumber * 10f;
 
@@ -75,14 +76,12 @@ public class EnemySpawner : MonoBehaviour
             };
         }
     }
-
     IEnumerator WaitForNextWave()
     {
         Debug.Log("Wave " + waveNumber + " completed. Next wave in " + timeBetweenWaves + " seconds...");
-        yield return new WaitForSeconds(timeBetweenWaves);
-
         if (waveNumber < maxWave)
         {
+            yield return new WaitForSeconds(timeBetweenWaves);
             StartCoroutine(StartWave());
         }
         else
