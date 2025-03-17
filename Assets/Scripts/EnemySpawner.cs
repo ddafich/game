@@ -1,5 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEditorInternal.VersionControl;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -19,8 +20,8 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesSpawned = 0; // Tracks how many have spawned
     private bool isSpawning = false;
 
+    DamageableChar DamageableChar;
 
-    
     public void StartSpawning()
     {
         if (!isSpawning)
@@ -54,9 +55,6 @@ public class EnemySpawner : MonoBehaviour
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         GameObject randEnemy = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
         GameObject enemy = Instantiate(randEnemy, spawnPoint.position, Quaternion.identity);
-        enemy.GetComponent<Enemy>().damage = 1f + (waveNumber * 0.5f);
-        enemy.GetComponent<Enemy>().knockbackForce += waveNumber * 10f;
-
         enemiesAlive++; // Only increase when actually spawning an enemy
         enemiesSpawned++;
 

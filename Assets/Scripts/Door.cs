@@ -10,23 +10,12 @@ public class DoorLock : MonoBehaviour
 
     [Header("Tilemap Settings")]
     public Tilemap tilemap;
-    public Vector3Int[] tilePositions;
-    public TileBase doorOpen;
-    public TileBase doorClose;
     private void Start()
     {
         m_Collider = GetComponents<Collider2D>();
         SetColliderEnabled(false);
     }
-
-    public void ChangeTiles(TileBase tile)
-    {
-        foreach (var pos in tilePositions)
-        {
-            tilemap.SetTile(pos, tile);
-        }
-    }
-
+    
     public void SetColliderEnabled(bool v)
     {
         foreach(var col in m_Collider)
@@ -39,7 +28,7 @@ public class DoorLock : MonoBehaviour
     {
         if (EnemySpawner.isCleared)
         {
-            ChangeTiles(doorOpen);
+            tilemap.gameObject.SetActive(false);
             SetColliderEnabled(false);
         }
     }

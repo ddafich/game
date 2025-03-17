@@ -8,7 +8,6 @@ using static UnityEngine.Rendering.DebugUI;
 public class Enemy : MonoBehaviour
 {
     
-    public float damage = 1f;
     public float knockbackForce = 200f;
     public float moveSpeed = 500f;
     public float maxSpeed = 3f;
@@ -20,12 +19,14 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     DamageableChar damagaebleChar;
+    SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         damagaebleChar = GetComponent<DamageableChar>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate()
     {
@@ -33,6 +34,13 @@ public class Enemy : MonoBehaviour
         {
             Vector2 direction = (detectionCircle.detectedObjects[0].transform.position - transform.position).normalized;
             rb.AddForce(direction * moveSpeed * Time.deltaTime);
+            if (direction.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else{
+                spriteRenderer.flipX = false;   
+            }
             IsMoving =true;
             if (rb.linearVelocity.magnitude > maxSpeed)
             {
@@ -56,7 +64,7 @@ public class Enemy : MonoBehaviour
                 Vector3 parentPosition = transform.position;
                 Vector2 direction = (col.collider.transform.position - parentPosition).normalized;
                 Vector2 knockback = direction * knockbackForce;
-                damageable.OnHit(damage, knockback);
+                damageable.OnHit(damagaebleChar.damage, knockback);
             }
         }
     }

@@ -24,9 +24,8 @@ public class DamageableChar : MonoBehaviour, IDamagable
     [Header("stats")]
     public float maxHealth = 5f;
     public float currentHealth = 2f;
-
     public float damage = 1f;
-    public float currentCoin = 0f;
+    
 
     [Header("loot")]
     public List<LootItem> lootTable = new List<LootItem>();
@@ -96,6 +95,10 @@ public class DamageableChar : MonoBehaviour, IDamagable
                 invincibleTimeElapsed = 0f;
             }
         }
+    }
+    public float Damage
+    {
+        get { return damage; }
     }
     public void FixedUpdate()
     {
