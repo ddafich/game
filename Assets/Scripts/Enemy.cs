@@ -64,9 +64,14 @@ public class Enemy : MonoBehaviour
                 Vector3 parentPosition = transform.position;
                 Vector2 direction = (col.collider.transform.position - parentPosition).normalized;
                 Vector2 knockback = direction * knockbackForce;
+                animator.SetTrigger("attack");
                 damageable.OnHit(damagaebleChar.damage, knockback);
             }
         }
+    }
+    void Attack()
+    {
+
     }
     public bool IsMoving
     {
