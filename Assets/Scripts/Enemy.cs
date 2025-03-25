@@ -13,13 +13,16 @@ public class Enemy : MonoBehaviour
     public float maxSpeed = 3f;
     public float idleFriction = 0.6f;
     bool isMoving = false;
-    
+    bool canMove = true;
 
     public DetectionCircle detectionCircle;
     Rigidbody2D rb;
     Animator animator;
     DamageableChar damagaebleChar;
     SpriteRenderer spriteRenderer;
+    Collider2D playerCollider;
+    
+    public HashSet<Collider2D> playerInRange = new HashSet<Collider2D>();
 
     private void Start()
     {
@@ -30,7 +33,7 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (damagaebleChar.Targetable && detectionCircle.detectedObjects.Count > 0)
+        if (canMove == true && damagaebleChar.Targetable && detectionCircle.detectedObjects.Count > 0)
         {
             Vector2 direction = (detectionCircle.detectedObjects[0].transform.position - transform.position).normalized;
             rb.AddForce(direction * moveSpeed * Time.deltaTime);
@@ -54,24 +57,54 @@ public class Enemy : MonoBehaviour
             IsMoving = false;
         }
     }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player entered attack range.");
+            playerInRange.Add(col); 
+        }
+    }
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player left attack range.");
+            playerInRange.Remove(col);
+        }
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            IDamagable damageable = col.collider.GetComponent<IDamagable>();
-            if (damageable != null)
+            
+            animator.SetTrigger("attack");
+        }
+    }
+    void DealDamage()
+    {
+        foreach (Collider2D playerCollider in playerInRange)
+        {
+            if (playerCollider != null)
             {
-                Vector3 parentPosition = transform.position;
-                Vector2 direction = (col.collider.transform.position - parentPosition).normalized;
-                Vector2 knockback = direction * knockbackForce;
-                animator.SetTrigger("attack");
-                damageable.OnHit(damagaebleChar.damage, knockback);
+                IDamagable damageable = playerCollider.GetComponent<IDamagable>();
+                if (damageable != null)
+                {
+                    Vector3 parentPosition = transform.position;
+                    Vector2 direction = (playerCollider.transform.position - parentPosition).normalized;
+                    Vector2 knockback = direction * knockbackForce;
+                    damageable.OnHit(damagaebleChar.damage, knockback);
+                }
             }
         }
     }
-    void Attack()
+    void LockMovement()
     {
-
+        canMove = false;
+    }
+    void UnlockMovement()
+    {
+        canMove=true;
     }
     public bool IsMoving
     {

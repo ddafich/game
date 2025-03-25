@@ -170,12 +170,12 @@ public class DamageableChar : MonoBehaviour, IDamagable
         if (!Invincible)
         {
             Health -= damage;
+            rb.AddForce(knockback, ForceMode2D.Impulse);
             audioManager.PlaySFX(audioManager.player_damaged);
             if (CompareTag("Player") && healthUI != null)
             {
                 healthUI.UpdateHeart(currentHealth);
             }
-            rb.AddForce(knockback, ForceMode2D.Impulse);
             if (isInvincibleEnabled)
             {
                 Invincible = true;

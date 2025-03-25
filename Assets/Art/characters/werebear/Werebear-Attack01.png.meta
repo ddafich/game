@@ -1,19 +1,46 @@
 fileFormatVersion: 2
-guid: 87431a423202ade4391ec95e17830358
+guid: 6d9a565bafcd75f49a95c102c308bef6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8051351617050381877
-    second: Orc-Hurt_0
+      213: -195695515886222138
+    second: Werebear-Attack01_0
   - first:
-      213: -1185003378899358547
-    second: Orc-Hurt_1
+      213: -4621144795108422938
+    second: Werebear-Attack01_1
   - first:
-      213: -2628998458732627980
-    second: Orc-Hurt_2
+      213: -2721700955551875361
+    second: Werebear-Attack01_2
   - first:
-      213: 2377824496227862384
-    second: Orc-Hurt_3
+      213: 305327335533768833
+    second: Werebear-Attack01_3
+  - first:
+      213: -294299188037475152
+    second: Werebear-Attack01_4
+  - first:
+      213: -719308823353989335
+    second: Werebear-Attack01_5
+  - first:
+      213: -7085209821148508112
+    second: Werebear-Attack01_6
+  - first:
+      213: -2401144010249928532
+    second: Werebear-Attack01_7
+  - first:
+      213: -6517162931334268921
+    second: Werebear-Attack01_8
+  - first:
+      213: 1694943436182624687
+    second: Werebear-Attack01_9
+  - first:
+      213: 4867983376707605119
+    second: Werebear-Attack01_10
+  - first:
+      213: 872660006913041742
+    second: Werebear-Attack01_11
+  - first:
+      213: 8871454891053564761
+    second: Werebear-Attack01_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Orc-Hurt_0
+      name: Werebear-Attack01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53e0e0843a52cbf60800000000000000
-      internalID: 8051351617050381877
+      spriteID: 6c4077317ffb84df0800000000000000
+      internalID: -195695515886222138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Hurt_1
+      name: Werebear-Attack01_1
       rect:
         serializedVersion: 2
         x: 100
@@ -159,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dace01f84b50e8fe0800000000000000
-      internalID: -1185003378899358547
+      spriteID: 6eacaefea456edfb0800000000000000
+      internalID: -4621144795108422938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Hurt_2
+      name: Werebear-Attack01_2
       rect:
         serializedVersion: 2
         x: 200
@@ -181,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f73130b4dbe38bd0800000000000000
-      internalID: -2628998458732627980
+      spriteID: fde3d7fa6639a3ad0800000000000000
+      internalID: -2721700955551875361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Hurt_3
+      name: Werebear-Attack01_3
       rect:
         serializedVersion: 2
         x: 300
@@ -203,8 +230,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07742e3f7cabff020800000000000000
-      internalID: 2377824496227862384
+      spriteID: 180f4be089dbc3400800000000000000
+      internalID: 305327335533768833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Attack01_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4275f92707aebf0800000000000000
+      internalID: -294299188037475152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Attack01_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9276e2caf608406f0800000000000000
+      internalID: -719308823353989335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Attack01_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030955be4374cad90800000000000000
+      internalID: -7085209821148508112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Attack01_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca00f769e3c6daed0800000000000000
+      internalID: -2401144010249928532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Attack01_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7083a76e7d26e85a0800000000000000
+      internalID: -6517162931334268921
       vertices: []
       indices: 
       edges: []
@@ -213,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fc6af175675beb445b9f0459e84015c4
+    spriteID: a6953badda89e724e95312001cf8b437
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +360,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Orc-Hurt_0: 8051351617050381877
-      Orc-Hurt_1: -1185003378899358547
-      Orc-Hurt_2: -2628998458732627980
-      Orc-Hurt_3: 2377824496227862384
+      Werebear-Attack01_0: -195695515886222138
+      Werebear-Attack01_1: -4621144795108422938
+      Werebear-Attack01_2: -2721700955551875361
+      Werebear-Attack01_3: 305327335533768833
+      Werebear-Attack01_4: -294299188037475152
+      Werebear-Attack01_5: -719308823353989335
+      Werebear-Attack01_6: -7085209821148508112
+      Werebear-Attack01_7: -2401144010249928532
+      Werebear-Attack01_8: -6517162931334268921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

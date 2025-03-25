@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 87431a423202ade4391ec95e17830358
+guid: 0fbb781dfa7e5ad4cad1950bd33fb901
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8051351617050381877
-    second: Orc-Hurt_0
+      213: -5004526510767300680
+    second: Werebear-Idle_0
   - first:
-      213: -1185003378899358547
-    second: Orc-Hurt_1
+      213: 3609393883403515724
+    second: Werebear-Idle_1
   - first:
-      213: -2628998458732627980
-    second: Orc-Hurt_2
+      213: 1387893624940018059
+    second: Werebear-Idle_2
   - first:
-      213: 2377824496227862384
-    second: Orc-Hurt_3
+      213: 5336546409777294913
+    second: Werebear-Idle_3
+  - first:
+      213: -1768686267006753101
+    second: Werebear-Idle_4
+  - first:
+      213: -2699804691739733528
+    second: Werebear-Idle_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Orc-Hurt_0
+      name: Werebear-Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53e0e0843a52cbf60800000000000000
-      internalID: 8051351617050381877
+      spriteID: 8bf90b057a95c8ab0800000000000000
+      internalID: -5004526510767300680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Hurt_1
+      name: Werebear-Idle_1
       rect:
         serializedVersion: 2
         x: 100
@@ -159,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dace01f84b50e8fe0800000000000000
-      internalID: -1185003378899358547
+      spriteID: c47fbb21d94271230800000000000000
+      internalID: 3609393883403515724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Hurt_2
+      name: Werebear-Idle_2
       rect:
         serializedVersion: 2
         x: 200
@@ -181,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f73130b4dbe38bd0800000000000000
-      internalID: -2628998458732627980
+      spriteID: b89349406e9c24310800000000000000
+      internalID: 1387893624940018059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orc-Hurt_3
+      name: Werebear-Idle_3
       rect:
         serializedVersion: 2
         x: 300
@@ -203,8 +209,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07742e3f7cabff020800000000000000
-      internalID: 2377824496227862384
+      spriteID: 14e692a7fa83f0a40800000000000000
+      internalID: 5336546409777294913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Idle_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b663f7063d5477e0800000000000000
+      internalID: -1768686267006753101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Werebear-Idle_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e19be1efed588ad0800000000000000
+      internalID: -2699804691739733528
       vertices: []
       indices: 
       edges: []
@@ -213,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fc6af175675beb445b9f0459e84015c4
+    spriteID: c8e4cb83b171b2046bec945976f1f831
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Orc-Hurt_0: 8051351617050381877
-      Orc-Hurt_1: -1185003378899358547
-      Orc-Hurt_2: -2628998458732627980
-      Orc-Hurt_3: 2377824496227862384
+      Werebear-Idle_0: -5004526510767300680
+      Werebear-Idle_1: 3609393883403515724
+      Werebear-Idle_2: 1387893624940018059
+      Werebear-Idle_3: 5336546409777294913
+      Werebear-Idle_4: -1768686267006753101
+      Werebear-Idle_5: -2699804691739733528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ske_attack
+  m_Name: bear_attack
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,17 +21,23 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1984506825430022774, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+      value: {fileID: -195695515886222138, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
     - time: 0.1
-      value: {fileID: -9010104471554957815, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+      value: {fileID: -4621144795108422938, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
     - time: 0.2
-      value: {fileID: 8317443887581303488, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+      value: {fileID: -2721700955551875361, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
     - time: 0.3
-      value: {fileID: -7379436075809802056, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+      value: {fileID: 305327335533768833, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
     - time: 0.4
-      value: {fileID: -7445157712990417273, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+      value: {fileID: -294299188037475152, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
     - time: 0.5
-      value: {fileID: 5298583175184561102, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+      value: {fileID: -719308823353989335, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - time: 0.6
+      value: {fileID: -7085209821148508112, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - time: 0.7
+      value: {fileID: -2401144010249928532, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - time: 0.8
+      value: {fileID: -6517162931334268921, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -54,18 +60,21 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1984506825430022774, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
-    - {fileID: -9010104471554957815, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
-    - {fileID: 8317443887581303488, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
-    - {fileID: -7379436075809802056, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
-    - {fileID: -7445157712990417273, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
-    - {fileID: 5298583175184561102, guid: d77cbf6f6f3afa943a12d6ae93fc2b1e, type: 3}
+    - {fileID: -195695515886222138, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -4621144795108422938, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -2721700955551875361, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: 305327335533768833, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -294299188037475152, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -719308823353989335, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -7085209821148508112, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -2401144010249928532, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
+    - {fileID: -6517162931334268921, guid: 6d9a565bafcd75f49a95c102c308bef6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6
+    m_StopTime: 0.90000004
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,21 +94,21 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.1
+  - time: 0
     functionName: LockMovement
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.3
+  - time: 0.5
     functionName: DealDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5
+  - time: 0.8
     functionName: UnlockMovement
     data: 
     objectReferenceParameter: {fileID: 0}
