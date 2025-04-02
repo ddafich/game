@@ -162,6 +162,13 @@ public class DamageableChar : MonoBehaviour, IDamagable
         if (loot)
         {
             GameObject droppedLoot = Instantiate(loot, transform.position, Quaternion.identity);
+            rb = droppedLoot.GetComponent<Rigidbody2D>();
+            if (rb)
+            {
+                Vector2 randomForce = new Vector2(UnityEngine.Random.Range(-0.5f, 0.5f), UnityEngine.Random.Range(-0.5f, 0.5f)); // Adjust force as needed
+                rb.AddForce(randomForce, ForceMode2D.Impulse);
+                rb.linearDamping = 4f;
+            }
         }
     }
 

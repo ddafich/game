@@ -4,12 +4,13 @@ using UnityEngine;
 public class CoinItem : MonoBehaviour
 {
     public int coinAmount = 1;
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
             CoinUI.instance.AddCoin(coinAmount);
         }
     }
 }
+    

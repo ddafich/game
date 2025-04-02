@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEditorInternal.VersionControl;
@@ -6,13 +7,14 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
-    
+
 
     public Transform[] spawnPoints;
     public int enemiesPerWave = 5;
     public float timeBetweenWaves = 5f;
     public float spawnDelay = 1f;
     public bool isCleared;
+    private bool hasCleared = false;
 
     private int maxWave = 3;
     private int waveNumber = 0;
@@ -21,7 +23,15 @@ public class EnemySpawner : MonoBehaviour
     private bool isSpawning = false;
 
     DamageableChar DamageableChar;
-
+    public event Action OnAreaCleared;
+    private void Update()
+    {
+        if (isCleared && !hasCleared)
+        {
+            hasCleared = true;
+            OnAreaCleared?.Invoke();
+        }
+    }
     public void StartSpawning()
     {
         if (!isSpawning)
@@ -36,24 +46,19 @@ public class EnemySpawner : MonoBehaviour
         waveNumber++;
         enemiesAlive = 0; // Reset count to be updated properly
         enemiesSpawned = 0;
-
         int totalEnemies = enemiesPerWave + waveNumber; // Increase difficulty
-
         Debug.Log("Starting Wave " + waveNumber + " with " + totalEnemies + " enemies");
-
         for (int i = 0; i < totalEnemies; i++)
         {
             SpawnEnemy();
             yield return new WaitForSeconds(spawnDelay);
         }
-
         isSpawning = false;
     }
-
     void SpawnEnemy()
     {
-        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        GameObject randEnemy = enemyPrefab[Random.Range(0, enemyPrefab.Length)];
+        Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+        GameObject randEnemy = enemyPrefab[UnityEngine.Random.Range(0, enemyPrefab.Length)];
         GameObject enemy = Instantiate(randEnemy, spawnPoint.position, Quaternion.identity);
         enemiesAlive++; // Only increase when actually spawning an enemy
         enemiesSpawned++;
@@ -87,7 +92,5 @@ public class EnemySpawner : MonoBehaviour
             isCleared = true;
             Debug.Log("area cleared");
         }
-
-    }
-    
+    } 
 }

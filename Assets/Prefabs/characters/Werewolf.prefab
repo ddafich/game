@@ -353,9 +353,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0785ff3efa46c1b4eb847f46f1b31775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 20
-  moveSpeed: 20
-  maxSpeed: 3
+  knockbackForce: 50
+  moveSpeed: 40
+  maxSpeed: 0.4
   idleFriction: 0.6
   detectionCircle: {fileID: 4855965135246212528}
 --- !u!114 &4389207330631211842

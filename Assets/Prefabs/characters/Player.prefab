@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  knockbackForce: 5
+  knockbackForce: 3
   swordCollider: {fileID: 2131089858092206323}
 --- !u!1 &5341281656086784912
 GameObject:
@@ -295,8 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6b3c8a3cdd4d34e8341d94681a7414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 500
-  maxSpeed: 1.4
+  moveSpeed: 200
+  maxSpeed: 1.2
   idleFriction: 0.9
   collisionOffset: 0.03
   movementFilter:
@@ -359,10 +359,9 @@ MonoBehaviour:
   disableSimulation: 1
   invincibleTime: 1
   isInvincibleEnabled: 1
-  maxHealth: 8
-  currentHealth: 8
+  maxHealth: 10
+  currentHealth: 10
   damage: 5
-  currentCoin: 0
   lootTable: []
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}

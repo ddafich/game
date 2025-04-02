@@ -96,6 +96,7 @@ public class Enemy : MonoBehaviour
                     damageable.OnHit(damagaebleChar.damage, knockback);
                 }
             }
+            else { break; }
         }
     }
     void LockMovement()

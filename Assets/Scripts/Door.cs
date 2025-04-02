@@ -23,7 +23,6 @@ public class DoorLock : MonoBehaviour
             col.enabled = v;
         }
     }
-
     private void Update()
     {
         if (EnemySpawner.isCleared)

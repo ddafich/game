@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 20
   moveSpeed: 20
-  maxSpeed: 3
+  maxSpeed: 0.7
   idleFriction: 0.6
   detectionCircle: {fileID: 5246740570694566626}
 --- !u!114 &1595484739050315930
