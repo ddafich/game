@@ -327,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8072832999066274612}
-  - component: {fileID: 3415152795798318798}
+  - component: {fileID: 2595822928069631030}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
@@ -350,8 +350,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2260557032791018538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3415152795798318798
-BoxCollider2D:
+--- !u!70 &2595822928069631030
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -380,19 +380,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.1327132, y: -0.097228825}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.5848262, y: 0.6305307}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 4, y: 1.3}
+  m_Direction: 1

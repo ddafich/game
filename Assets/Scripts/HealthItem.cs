@@ -5,7 +5,7 @@ public class HealthItem : MonoBehaviour
 {
     public int healAmount = 1;
     public static event Action<int> OnHealthCollect;
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
@@ -22,7 +22,6 @@ public class HealthItem : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
     }
-    
+
 }

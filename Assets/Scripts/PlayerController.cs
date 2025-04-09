@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -82,13 +83,16 @@ public class PlayerController : MonoBehaviour
     void OnFire()
     {
         //Debug.Log("attacking");
-        animator.SetTrigger("swordAttack");
+        animator.SetTrigger("attack");
     }
 
     public void SwordAttack()
     {
         LockMovement();
         audioManager.PlaySFX(audioManager.player_attack);
+    }
+    public void SwordAttackDealDmg() 
+    { 
         if (spriteRenderer.flipX == true)
         {
             swordAttack.AttackLeft();

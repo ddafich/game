@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            
+            animator.SetInteger("attackIndex", UnityEngine.Random.Range(0, 3));
             animator.SetTrigger("attack");
         }
     }

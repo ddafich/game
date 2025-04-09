@@ -137,10 +137,10 @@ TextureImporter:
       name: Armored Orc-Walk_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 42
-        width: 27
-        height: 21
+        x: 0
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: Armored Orc-Walk_1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 43
-        width: 26
-        height: 21
+        x: 100
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Armored Orc-Walk_2
       rect:
         serializedVersion: 2
-        x: 242
-        y: 42
-        width: 26
-        height: 21
+        x: 200
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Armored Orc-Walk_3
       rect:
         serializedVersion: 2
-        x: 341
-        y: 41
-        width: 27
-        height: 21
+        x: 300
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: Armored Orc-Walk_4
       rect:
         serializedVersion: 2
-        x: 441
-        y: 42
-        width: 27
-        height: 21
+        x: 400
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: Armored Orc-Walk_5
       rect:
         serializedVersion: 2
-        x: 541
-        y: 43
-        width: 27
-        height: 21
+        x: 500
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +269,10 @@ TextureImporter:
       name: Armored Orc-Walk_6
       rect:
         serializedVersion: 2
-        x: 641
-        y: 42
-        width: 27
-        height: 21
+        x: 600
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: Armored Orc-Walk_7
       rect:
         serializedVersion: 2
-        x: 741
-        y: 41
-        width: 27
-        height: 21
+        x: 700
+        y: 0
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a9f85d8d07fc30b409176d7d97d887d4
     internalID: 0
     vertices: []
     indices: 
