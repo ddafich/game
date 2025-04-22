@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228124563
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -7854738478779454800, guid: 6ed520b581a307240885f619d6104230, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,8 +212,8 @@ MonoBehaviour:
   disableSimulation: 0
   invincibleTime: 1
   isInvincibleEnabled: 0
-  maxHealth: 3
-  currentHealth: 3
+  maxHealth: 4
+  currentHealth: 4
   damage: 1
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
@@ -223,6 +223,7 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
+  Ui: {fileID: 0}
 --- !u!1 &1924736273198059637
 GameObject:
   m_ObjectHideFlags: 0

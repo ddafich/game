@@ -1,7 +1,8 @@
 using System;
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
-using UnityEditorInternal.VersionControl;
+
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -10,17 +11,19 @@ public class EnemySpawner : MonoBehaviour
 
 
     public Transform[] spawnPoints;
-    public int enemiesPerWave = 5;
+    public int enemiesPerWave = 0;
     public float timeBetweenWaves = 5f;
     public float spawnDelay = 1f;
     public bool isCleared;
     private bool hasCleared = false;
 
-    private int maxWave = 3;
+    public int maxWave = 3;
     private int waveNumber = 0;
-    private int enemiesAlive = 0;
-    private int enemiesSpawned = 0; // Tracks how many have spawned
+    public int enemiesAlive = 0;
+    public int enemiesSpawned = 0; // Tracks how many have spawned
     private bool isSpawning = false;
+
+    
 
     DamageableChar DamageableChar;
     public event Action OnAreaCleared;
@@ -46,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
         waveNumber++;
         enemiesAlive = 0; // Reset count to be updated properly
         enemiesSpawned = 0;
-        int totalEnemies = enemiesPerWave + waveNumber; // Increase difficulty
+        int totalEnemies = enemiesPerWave + waveNumber -1; // Increase difficulty
         Debug.Log("Starting Wave " + waveNumber + " with " + totalEnemies + " enemies");
         for (int i = 0; i < totalEnemies; i++)
         {
@@ -72,7 +75,7 @@ public class EnemySpawner : MonoBehaviour
                 Debug.Log("Enemy died. Enemies left: " + enemiesAlive);
 
                 // Only start next wave if all enemies have spawned and died
-                if (enemiesAlive <= 0 && enemiesSpawned >= (enemiesPerWave + waveNumber) && !isSpawning)
+                if (enemiesAlive == 0 && waveNumber <= maxWave && !isSpawning)
                 {
                     StartCoroutine(WaitForNextWave());
                 }

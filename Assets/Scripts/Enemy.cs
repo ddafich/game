@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using NUnit.Framework;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -61,7 +62,6 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player entered attack range.");
             playerInRange.Add(col); 
         }
     }
@@ -69,7 +69,6 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player left attack range.");
             playerInRange.Remove(col);
         }
     }

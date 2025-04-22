@@ -164,8 +164,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228124563
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1697572217658996889, guid: 8ba9ed09bd4bcc94ca93fefc8884e6c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0785ff3efa46c1b4eb847f46f1b31775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 20
+  knockbackForce: 40
   moveSpeed: 30
   maxSpeed: 0.5
   idleFriction: 0.6
@@ -305,9 +305,9 @@ MonoBehaviour:
   disableSimulation: 0
   invincibleTime: 1
   isInvincibleEnabled: 0
-  maxHealth: 6
-  currentHealth: 6
-  damage: 1
+  maxHealth: 8
+  currentHealth: 8
+  damage: 2
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
@@ -316,6 +316,7 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
+  Ui: {fileID: 0}
 --- !u!1 &4421102468095151362
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3251953701815711501}
-  - component: {fileID: 6102236331355614699}
+  - component: {fileID: 7302885885288314568}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
@@ -348,8 +349,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1216947999169351146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6102236331355614699
-CircleCollider2D:
+--- !u!70 &7302885885288314568
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -378,9 +379,10 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Size: {x: 3.2, y: 1.4}
+  m_Direction: 1

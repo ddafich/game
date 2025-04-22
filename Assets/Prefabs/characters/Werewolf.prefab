@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7296390190038042293}
-  - component: {fileID: 9016408192756140600}
+  - component: {fileID: 5936503599522906755}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
@@ -116,8 +116,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7964995345293490682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &9016408192756140600
-CircleCollider2D:
+--- !u!70 &5936503599522906755
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -151,7 +151,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Size: {x: 3, y: 1.5}
+  m_Direction: 1
 --- !u!1 &7418365566041329767
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,8 +233,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228124563
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4565372846758268570, guid: 37017611addd5a942b5a7b607b7cc7b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0785ff3efa46c1b4eb847f46f1b31775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 50
+  knockbackForce: 80
   moveSpeed: 40
   maxSpeed: 0.4
   idleFriction: 0.6
@@ -373,9 +374,9 @@ MonoBehaviour:
   disableSimulation: 0
   invincibleTime: 1
   isInvincibleEnabled: 0
-  maxHealth: 5
-  currentHealth: 2
-  damage: 1
+  maxHealth: 10
+  currentHealth: 10
+  damage: 2
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
@@ -384,3 +385,4 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
+  Ui: {fileID: 0}

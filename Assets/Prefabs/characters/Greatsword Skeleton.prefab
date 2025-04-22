@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4899193671450123057}
   m_Layer: 0
   m_Name: Greatsword Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228124563
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -6428129625516625643, guid: 7ed4f02bac7a19a43af98ed3963390e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0785ff3efa46c1b4eb847f46f1b31775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 60
+  knockbackForce: 100
   moveSpeed: 30
   maxSpeed: 0.2
   idleFriction: 0.6
@@ -221,9 +221,9 @@ MonoBehaviour:
   disableSimulation: 0
   invincibleTime: 1
   isInvincibleEnabled: 0
-  maxHealth: 8
-  currentHealth: 8
-  damage: 3
+  maxHealth: 10
+  currentHealth: 10
+  damage: 2
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
@@ -234,6 +234,7 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
+  Ui: {fileID: 0}
 --- !u!1 &5522529224546340020
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +381,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

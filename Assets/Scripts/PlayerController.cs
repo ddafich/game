@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
     bool canMove = true;
+    public bool canAttack = true;
 
     AudioManager audioManager;
     private void Awake()
@@ -79,13 +80,13 @@ public class PlayerController : MonoBehaviour
     {
         movementInput = movementValue.Get<Vector2>();
     }
-
     void OnFire()
     {
-        //Debug.Log("attacking");
-        animator.SetTrigger("attack");
+        if (canAttack)
+        {
+            animator.SetTrigger("attack");
+        }    
     }
-
     public void SwordAttack()
     {
         LockMovement();

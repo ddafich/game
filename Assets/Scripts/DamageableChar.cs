@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
+using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 public class DamageableChar : MonoBehaviour, IDamagable
@@ -33,8 +35,12 @@ public class DamageableChar : MonoBehaviour, IDamagable
     public HealthUI healthUI;
     public GameObject healthText;
     public GameObject gameoverPanel;
+    public GameObject Ui;
 
     AudioManager audioManager;
+    killcount killcount;
+
+    
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -55,13 +61,10 @@ public class DamageableChar : MonoBehaviour, IDamagable
                 Targetable = false;
 
                 Death();
-                if (gameObject.CompareTag("Player"))
-                {
-                    gameoverPanel.SetActive(true);
-                }
-                else if (gameObject.CompareTag("Enemy"))
+                if (gameObject.CompareTag("Enemy"))
                 {
                     OnDeath?.Invoke();
+                    killcount.AddKill();
                 }
 
             }
@@ -134,6 +137,9 @@ public class DamageableChar : MonoBehaviour, IDamagable
 
         HealthItem.OnHealthCollect += Heal;
 
+        killcount = GameObject.Find("kill count").GetComponent<killcount>();    
+        
+
     }
     private void setHealhText()
     {
@@ -146,7 +152,6 @@ public class DamageableChar : MonoBehaviour, IDamagable
     {
         animator.SetBool("isAlive", false);
         audioManager.PlaySFX(audioManager.slime_death);
-
         foreach (LootItem lootItem in lootTable)
         {
             if (UnityEngine.Random.Range(0f, 100f) <= lootItem.dropChance)
@@ -209,7 +214,6 @@ public class DamageableChar : MonoBehaviour, IDamagable
         HealthItem.OnHealthCollect += Heal;
 
     }
-
     private void OnDisable()
     {
         // Ensure proper event cleanup to avoid accessing destroyed objects
@@ -242,8 +246,14 @@ public class DamageableChar : MonoBehaviour, IDamagable
     public void DestroyOnDeath()
     {
         Destroy(gameObject, 3f);
+        
     }
     public delegate void DeathAction();
     public event DeathAction OnDeath;
+    public void SetGameoverPanel() 
+    {
+        gameoverPanel.SetActive(true);
+        Ui.SetActive(false);
+    }
 }
     

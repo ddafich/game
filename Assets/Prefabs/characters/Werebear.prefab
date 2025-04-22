@@ -146,7 +146,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -233,8 +233,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228124563
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5004526510767300680, guid: 0fbb781dfa7e5ad4cad1950bd33fb901, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0785ff3efa46c1b4eb847f46f1b31775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 90
   moveSpeed: 200
   maxSpeed: 0.3
   idleFriction: 0.6
@@ -389,3 +389,4 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
+  Ui: {fileID: 0}

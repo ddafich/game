@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1228124563
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4831881393279159307, guid: 4c44fd958cc2d1e429b36e820b07e89f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,7 +181,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6875, y: 1.3125}
+    oldSize: {x: 6.25, y: 6.25}
     newSize: {x: 1.6875, y: 1.3125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0785ff3efa46c1b4eb847f46f1b31775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 60
   moveSpeed: 30
   maxSpeed: 0.5
   idleFriction: 0.6
@@ -234,6 +234,7 @@ MonoBehaviour:
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
+  Ui: {fileID: 0}
 --- !u!1 &7651182261475135368
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8019777620931269088}
-  - component: {fileID: 9067808425868384370}
+  - component: {fileID: 1869579210128593965}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
@@ -350,8 +351,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2214978192095638240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &9067808425868384370
-CircleCollider2D:
+--- !u!70 &1869579210128593965
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -385,4 +386,5 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 1.5
+  m_Size: {x: 3.2, y: 1.3}
+  m_Direction: 1
