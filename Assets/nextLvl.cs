@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class nextLvl : MonoBehaviour
 {
+    public string nextScene;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            int index = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(index + 1);
+            LevelManager.Instance.LoadScene(nextScene);
         }
     }
 }

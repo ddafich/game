@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,20 +119,20 @@ TextureImporter:
       name: dust_particles_01_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 8
-        height: 8
+        x: 0
+        y: 0
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 250f3336e169070c0800000000000000
-      internalID: -4579995763778260910
+      spriteID: 20f47c5f079aa8c49836155997fd5b37
+      internalID: -1229332714
       vertices: []
       indices: 
       edges: []
@@ -141,20 +141,42 @@ TextureImporter:
       name: dust_particles_01_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 3
-        width: 17
-        height: 6
+        x: 12
+        y: 0
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5f62ce238e7a9cfe0800000000000000
-      internalID: -1168218012597344523
+      spriteID: e40388c88aec14e4598e039480a9adfc
+      internalID: -704761409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust_particles_01_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578af9fcdd441bc469bfcf171d9aaae8
+      internalID: -1050596109
       vertices: []
       indices: 
       edges: []
@@ -163,7 +185,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e16e564918933c6498adfd244655de94
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +194,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dust_particles_01_0: -1229332714
+      dust_particles_01_1: -704761409
+      dust_particles_01_2: -1050596109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

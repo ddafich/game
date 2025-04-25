@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static killcount;
@@ -13,12 +12,14 @@ public class Gameover : MonoBehaviour
     {
         GlobalTimer.elapsedTime = 0;
         GlobalKillCounter.killCount = 0;
+        CoinUI.currentCoin = 0;
         SceneManager.LoadScene("Game");
     }
     public void Home()
     {
         GlobalTimer.elapsedTime = 0;
         GlobalKillCounter.killCount = 0;
+        CoinUI.currentCoin = 0;
         SceneManager.LoadScene("Start");
     }
     public void Exit()

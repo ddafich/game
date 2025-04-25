@@ -6,8 +6,7 @@ public class CoinUI : MonoBehaviour
     public static CoinUI instance;
     public TMP_Text coinText;
     public TMP_Text gameoverCoinText;
-    public int currentCoin = 0;
-
+    public static int currentCoin = 0;
     private void Awake()
     {
         instance = this;

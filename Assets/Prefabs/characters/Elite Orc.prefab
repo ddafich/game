@@ -116,7 +116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9632169, y: -7.9895377, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7079751528079176011}
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 150
   moveSpeed: 100
-  maxSpeed: 0.2
+  maxSpeed: 0.25
   idleFriction: 0.6
   detectionCircle: {fileID: 4642568701824535521}
 --- !u!114 &5988810168948824664

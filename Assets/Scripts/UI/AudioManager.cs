@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     {
         bgmSource.clip = background;
         bgmSource.Play();
+        DontDestroyOnLoad(gameObject);
     }
     public void PlaySFX(AudioClip clip)
     {
