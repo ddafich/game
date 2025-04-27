@@ -607,6 +607,7 @@ MonoBehaviour:
   damage: 3
   knockbackForce: 3
   swordCollider: {fileID: 7435486025731769977}
+  healthText: {fileID: 0}
 --- !u!1 &9105654737608287219
 GameObject:
   m_ObjectHideFlags: 0

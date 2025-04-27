@@ -374,15 +374,25 @@ MonoBehaviour:
   disableSimulation: 0
   invincibleTime: 1
   isInvincibleEnabled: 0
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 16
+  currentHealth: 16
   damage: 2
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
+  - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
+    dropChance: 100
+  - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
+    dropChance: 50
   - itemPrefab: {fileID: 4370298451464061620, guid: 408de397d35022a4e857a1962d585b18, type: 3}
+    dropChance: 0.5
+  - itemPrefab: {fileID: 6079309483391429737, guid: 08a8bb37750028d47b5a137a57418e31, type: 3}
     dropChance: 20
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
   Ui: {fileID: 0}
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxKnockbackSpeed: 200

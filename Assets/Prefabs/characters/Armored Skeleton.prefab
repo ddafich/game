@@ -313,10 +313,16 @@ MonoBehaviour:
     dropChance: 100
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 50
+  - itemPrefab: {fileID: 3154085177793896883, guid: 31d9703883b76e241815ca2a2674a02d, type: 3}
+    dropChance: 1
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
   Ui: {fileID: 0}
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxKnockbackSpeed: 200
 --- !u!1 &4421102468095151362
 GameObject:
   m_ObjectHideFlags: 0

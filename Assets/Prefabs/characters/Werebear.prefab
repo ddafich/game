@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackForce: 90
-  moveSpeed: 200
+  moveSpeed: 20
   maxSpeed: 0.3
   idleFriction: 0.6
   detectionCircle: {fileID: 6043794545906375158}
@@ -374,19 +374,25 @@ MonoBehaviour:
   disableSimulation: 0
   invincibleTime: 1
   isInvincibleEnabled: 0
-  maxHealth: 10
-  currentHealth: 10
+  maxHealth: 16
+  currentHealth: 16
   damage: 2
   lootTable:
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
-  - itemPrefab: {fileID: 4370298451464061620, guid: 408de397d35022a4e857a1962d585b18, type: 3}
-    dropChance: 50
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
+  - itemPrefab: {fileID: 4370298451464061620, guid: 408de397d35022a4e857a1962d585b18, type: 3}
+    dropChance: 20
+  - itemPrefab: {fileID: 3154085177793896883, guid: 31d9703883b76e241815ca2a2674a02d, type: 3}
+    dropChance: 0.5
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
   Ui: {fileID: 0}
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  maxKnockbackSpeed: 200
