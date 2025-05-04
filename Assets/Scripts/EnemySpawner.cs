@@ -8,9 +8,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
-
-
     public Transform[] spawnPoints;
+
     public int enemiesPerWave = 0;
     public float timeBetweenWaves = 5f;
     public float spawnDelay = 1f;
@@ -20,10 +19,8 @@ public class EnemySpawner : MonoBehaviour
     public int maxWave = 3;
     private int waveNumber = 0;
     public int enemiesAlive = 0;
-    public int enemiesSpawned = 0; // Tracks how many have spawned
+    public int enemiesSpawned = 0; 
     private bool isSpawning = false;
-
-    
 
     DamageableChar DamageableChar;
     public event Action OnAreaCleared;
@@ -47,9 +44,9 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = true;
         isCleared = false;
         waveNumber++;
-        enemiesAlive = 0; // Reset count to be updated properly
+        enemiesAlive = 0;
         enemiesSpawned = 0;
-        int totalEnemies = enemiesPerWave + waveNumber -1; // Increase difficulty
+        int totalEnemies = enemiesPerWave + waveNumber -1;
         Debug.Log("Starting Wave " + waveNumber + " with " + totalEnemies + " enemies");
         for (int i = 0; i < totalEnemies; i++)
         {
@@ -84,7 +81,6 @@ public class EnemySpawner : MonoBehaviour
     }
     IEnumerator WaitForNextWave()
     {
-        Debug.Log("Wave " + waveNumber + " completed. Next wave in " + timeBetweenWaves + " seconds...");
         if (waveNumber < maxWave)
         {
             yield return new WaitForSeconds(timeBetweenWaves);
@@ -92,8 +88,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else
         {
-            isCleared = true;
-            Debug.Log("area cleared");
+            isCleared = true; 
         }
     } 
 }

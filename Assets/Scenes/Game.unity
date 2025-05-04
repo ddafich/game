@@ -1964,7 +1964,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4533,7 +4533,7 @@ MonoBehaviour:
   m_Intensity: 0.12
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000006d4eccb6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -4917,14 +4917,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 1189671580}
   sfxSource: {fileID: 388815755}
-  background: {fileID: 8300000, guid: e2340522bc238264cbb1efd12c0c4169, type: 3}
+  background: {fileID: 0}
   player_move: {fileID: 8300000, guid: fc3cf568d0985744693610a60c353c6e, type: 3}
-  player_attack: {fileID: 8300000, guid: 2b41a2d6e8b040f459a1ce2bab8f8d01, type: 3}
+  player_attack: {fileID: 8300000, guid: 489814781a189464ca387fe010d8b536, type: 3}
   player_death: {fileID: 8300000, guid: 1080df362b388db4ca9ffa0ef7b5a521, type: 3}
-  player_damaged: {fileID: 8300000, guid: d6cf9d6dec25d68429db7ff64da4094d, type: 3}
+  player_damaged: {fileID: 8300000, guid: 56ddd1846fff3ec43a64a3d7399aaf0c, type: 3}
   slime_move: {fileID: 8300000, guid: a72593be438fd0044a4d38f172b4caa7, type: 3}
   slime_damaged: {fileID: 8300000, guid: 9bab0998b4f13cd47b92c8b3075fff27, type: 3}
   slime_death: {fileID: 8300000, guid: 1b82cc5937447644aa11195a8339fb55, type: 3}
+  coinPickup: {fileID: 8300000, guid: 4402c0c73c9527448b1748002c8ddcd9, type: 3}
+  powerUp: {fileID: 8300000, guid: af1283335ff431f40921218de9770539, type: 3}
+  chestOpen: {fileID: 8300000, guid: bbec54fee9679684aab960947cb4d342, type: 3}
+  doorOpen: {fileID: 8300000, guid: a7477933461188d46a47ad759000c8b1, type: 3}
+  doorClose: {fileID: 8300000, guid: 1a5a3cb89671ddf4e97df959c1cb645d, type: 3}
 --- !u!4 &754716508
 Transform:
   m_ObjectHideFlags: 0
@@ -42831,7 +42836,7 @@ MonoBehaviour:
   timeBetweenWaves: 5
   spawnDelay: 1.5
   isCleared: 0
-  maxWave: 0
+  maxWave: 3
   enemiesAlive: 0
   enemiesSpawned: 0
 --- !u!1 &1164562292
@@ -47863,7 +47868,7 @@ MonoBehaviour:
   - {fileID: 296511387}
   - {fileID: 613143558}
   - {fileID: 1315896019}
-  enemiesPerWave: 4
+  enemiesPerWave: 3
   timeBetweenWaves: 5
   spawnDelay: 0.3
   isCleared: 0
@@ -48235,11 +48240,11 @@ MonoBehaviour:
   - {fileID: 962398171}
   - {fileID: 1753179220}
   - {fileID: 1292537811}
-  enemiesPerWave: 6
+  enemiesPerWave: 4
   timeBetweenWaves: 5
   spawnDelay: 1.5
   isCleared: 0
-  maxWave: 0
+  maxWave: 3
   enemiesAlive: 0
   enemiesSpawned: 0
 --- !u!1 &1991845988
@@ -48752,7 +48757,7 @@ MonoBehaviour:
   timeBetweenWaves: 5
   spawnDelay: 1.5
   isCleared: 0
-  maxWave: 0
+  maxWave: 3
   enemiesAlive: 0
   enemiesSpawned: 0
 --- !u!1 &2138772125

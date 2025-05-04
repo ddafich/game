@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour
     public float idleFriction = 0.6f;
     bool isMoving = false;
     bool canMove = true;
+
+   
 
     public DetectionCircle detectionCircle;
     Rigidbody2D rb;
@@ -34,6 +37,7 @@ public class Enemy : MonoBehaviour
         {
             Vector2 direction = (detectionCircle.detectedObjects[0].transform.position - transform.position).normalized;
             rb.AddForce(direction * moveSpeed * Time.deltaTime);
+
             if (direction.x < 0)
             {
                 spriteRenderer.flipX = true;
@@ -80,18 +84,17 @@ public class Enemy : MonoBehaviour
     {
         foreach (Collider2D playerCollider in playerInRange)
         {
-            if (playerCollider != null)
+            if (playerCollider == null) continue;
+
+            IDamagable damageable = playerCollider.GetComponent<IDamagable>();
+            if (damageable != null)
             {
-                IDamagable damageable = playerCollider.GetComponent<IDamagable>();
-                if (damageable != null)
-                {
-                    Vector3 parentPosition = transform.position;
-                    Vector2 direction = (playerCollider.transform.position - parentPosition).normalized;
-                    Vector2 knockback = direction * knockbackForce;
-                    damageable.OnHit(damagaebleChar.damage, knockback);
-                }
+                Vector3 parentPosition = transform.position;
+                Vector2 direction = (playerCollider.transform.position - parentPosition).normalized;
+                Vector2 knockback = direction * knockbackForce;
+                damageable.OnHit(damagaebleChar.damage, knockback);
             }
-            else { break; }
+            
         }
     }
     void LockMovement()
@@ -109,5 +112,29 @@ public class Enemy : MonoBehaviour
             isMoving = value;
             animator.SetBool("isMoving", value);
         }
+    }
+    private bool isDashing = false;
+    private float originalMaxSpeed;
+
+    public void Dash(float dashMultiplier, float duration)
+    {
+        if (!isDashing)
+            StartCoroutine(DashCoroutine(dashMultiplier, duration));
+    }
+    private IEnumerator DashCoroutine(float dashMultiplier, float duration)
+    {
+        isDashing = true;
+        originalMaxSpeed = maxSpeed;
+
+        maxSpeed *= dashMultiplier;
+
+        yield return new WaitForSeconds(duration);
+
+        maxSpeed = originalMaxSpeed;
+        isDashing = false;
+    }
+    public void DashAnimEvent()
+    {
+        Dash(50f, 2f); // 2x speed for 0.5 seconds
     }
 }

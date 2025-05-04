@@ -15,6 +15,12 @@ public class AudioManager : MonoBehaviour
     
     public AudioClip slime_damaged;
     public AudioClip slime_death;
+
+    public AudioClip coinPickup;
+    public AudioClip powerUp;
+    public AudioClip chestOpen;
+    public AudioClip doorOpen;
+    public AudioClip doorClose;
     private void Start()
     {
         bgmSource.clip = background;
@@ -23,7 +29,10 @@ public class AudioManager : MonoBehaviour
     }
     public void PlaySFX(AudioClip clip)
     {
+        sfxSource.volume = Random.Range(0.2f, 0.4f);
+        sfxSource.pitch = Random.Range(0.8f, 1.2f);
         sfxSource.PlayOneShot(clip);
+        Debug.Log("Playing clip: " + clip.name);
     }
     
 }

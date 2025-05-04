@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class CoinItem : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public int coinAmount = 1;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -9,6 +15,7 @@ public class CoinItem : MonoBehaviour
         {
             Destroy(gameObject);
             CoinUI.instance.AddCoin(coinAmount);
+            audioManager.PlaySFX(audioManager.coinPickup);
         }
     }
 }

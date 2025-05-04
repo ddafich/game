@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class loot_wine : MonoBehaviour
 {
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public int increaseAmount;
     
     private void OnCollisionEnter2D(Collision2D col) 
@@ -12,13 +17,10 @@ public class loot_wine : MonoBehaviour
             if (swordAttack != null)
             {
                 swordAttack.IncreaseDamage(increaseAmount);
+                
             }
             Destroy(gameObject);
-        }
-        popup popup = FindObjectOfType<popup>();
-        if (popup != null)
-        {
-            popup.ShowMessage("You feel stronger!");
-        }
+            audioManager.PlaySFX(audioManager.powerUp);
+        } 
     }
 }

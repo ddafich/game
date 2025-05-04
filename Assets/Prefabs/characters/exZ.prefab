@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 7963619204590385054}
   - component: {fileID: 7077410495252562862}
   - component: {fileID: 5675680183359890703}
-  - component: {fileID: 7017458012385169552}
+  - component: {fileID: -802783188381620006}
+  - component: {fileID: 4934998160766488871}
+  - component: {fileID: 6212186560761108236}
+  - component: {fileID: 6801240856809915961}
   m_Layer: 0
   m_Name: exZ
   m_TagString: Enemy
@@ -184,6 +187,8 @@ MonoBehaviour:
     dropChance: 100
   - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
     dropChance: 100
+  - itemPrefab: {fileID: 4888220993881852321, guid: 5b7d578877694a34099ff13cd4d51f3d, type: 3}
+    dropChance: 100
   healthUI: {fileID: 0}
   healthText: {fileID: 5972626979993782149, guid: 81d3fcfdba872554abd105cadaca3262, type: 3}
   gameoverPanel: {fileID: 0}
@@ -204,7 +209,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -219,8 +224,149 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7017458012385169552
-CircleCollider2D:
+--- !u!114 &-802783188381620006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613351323545749309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0ca8c4cb9a2364e98899ba54e9de76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepFx:
+  - {fileID: 8300000, guid: 8e22d1837b297d146b027f84ccda6646, type: 3}
+  - {fileID: 8300000, guid: f99243aadc99b194ab8c41bb6861d3d6, type: 3}
+  - {fileID: 8300000, guid: 060bda9b612196f498cd0a67cdd8200a, type: 3}
+  - {fileID: 8300000, guid: 66875d9b6c1e3fe4d9e3bce0a137db69, type: 3}
+  - {fileID: 8300000, guid: ea3c6904868d22a45b80fc3a6b8c9204, type: 3}
+  - {fileID: 8300000, guid: d8472d11f3db8b743a9ce085af25e30e, type: 3}
+  - {fileID: 8300000, guid: 3c5fc9ec246ed3b48a3209ad59566de2, type: 3}
+  - {fileID: 8300000, guid: 0865f9f277342b54e8e496608645e43e, type: 3}
+--- !u!82 &4934998160766488871
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613351323545749309}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6212186560761108236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613351323545749309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a02fe206b8695449a477711a76b018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swing:
+  - {fileID: 8300000, guid: 252946a9d5a76854291676a0e2807d19, type: 3}
+  - {fileID: 8300000, guid: e2f356f8c18f5f346a3d1d75cc146f25, type: 3}
+  - {fileID: 8300000, guid: bb58a0327839d6442bc584dbbfd9a3be, type: 3}
+  - {fileID: 8300000, guid: e54997126f397db4791825c2fc3086a3, type: 3}
+  - {fileID: 8300000, guid: 1c30c0a662f177048a26022774e2879f, type: 3}
+  - {fileID: 8300000, guid: 4f825e532e7bc8c4f98fdd5303b6fb70, type: 3}
+  swingHeavy:
+  - {fileID: 8300000, guid: a3083645cee3a5f40bc8693a207df124, type: 3}
+  - {fileID: 8300000, guid: 70f65f354c6f3544493a9bbc5f164fed, type: 3}
+  - {fileID: 8300000, guid: f15b49ccebb0fc94dbd2b79db13d499d, type: 3}
+--- !u!61 &6801240856809915961
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -253,8 +399,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.17648366, y: -0.18638083}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.92, y: 1.28}
+    newSize: {x: 1.17, y: 0.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.44910723, y: 0.53487504}
+  m_EdgeRadius: 0
 --- !u!1 &4093181839967696569
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +561,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.1, y: 1}
+  m_Offset: {x: 0.14228597, y: -0.000000016961808}
+  m_Size: {x: 1.3845798, y: 1.0000001}
   m_Direction: 1

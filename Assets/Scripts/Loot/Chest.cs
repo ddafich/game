@@ -8,11 +8,11 @@ public class Chest : MonoBehaviour
     bool isOpened = false;
     Rigidbody2D rb;
 
-    
+    AudioManager audioManager;
     private void Start()
     {
         animator = GetComponent<Animator>();
-        
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,6 +26,7 @@ public class Chest : MonoBehaviour
                     if (UnityEngine.Random.Range(0f, 100f) <= lootItem.dropChance)
                     {
                         InstantiateLoot(lootItem.itemPrefab);
+                        audioManager.PlaySFX(audioManager.chestOpen);
                         isOpened = true;
                     }
                 }

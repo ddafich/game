@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class loot_chicken : MonoBehaviour
 {
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     public int healAmount = 1;
     public static event Action<int> OnHealthCollect;
     private void OnCollisionEnter2D(Collision2D col)
@@ -17,6 +23,7 @@ public class loot_chicken : MonoBehaviour
                     if (target != null)  // Check if the target still exists
                     {
                         d.DynamicInvoke(healAmount);
+                        
                     }
                 }
             }
@@ -25,12 +32,8 @@ public class loot_chicken : MonoBehaviour
             {
                 damageableChar.IncreaseMaxHealth(healAmount);
             }
-            popup popup = FindObjectOfType<popup>();
-            if (popup != null)
-            {
-                popup.ShowMessage("You feel stronger!");
-            }
             Destroy(gameObject);
+            audioManager.PlaySFX(audioManager.powerUp);
         }
     }
 }
