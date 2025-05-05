@@ -45,9 +45,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 7200597375081662951}
   sfxSource: {fileID: 3204477343538249019}
-  background: {fileID: 0}
+  background: {fileID: 8300000, guid: e2340522bc238264cbb1efd12c0c4169, type: 3}
   player_move: {fileID: 8300000, guid: cf87e93f6fe4de046aeb7b14305907e4, type: 3}
   player_attack: {fileID: 8300000, guid: 489814781a189464ca387fe010d8b536, type: 3}
   player_death: {fileID: 8300000, guid: 1080df362b388db4ca9ffa0ef7b5a521, type: 3}
