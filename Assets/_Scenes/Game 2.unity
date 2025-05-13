@@ -1196,10 +1196,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5069081115258955986, guid: ed1badf57de0e8e49aeab9bec0b5be0a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5771293898695913955, guid: ed1badf57de0e8e49aeab9bec0b5be0a, type: 3}
       propertyPath: m_Name
       value: Torch
@@ -11154,7 +11150,7 @@ MonoBehaviour:
   m_Intensity: 0.12
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000006d4eccb6a947ee36ab1415ff632950fe
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -58196,8 +58192,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -28300957
+  m_SortingLayer: 4
   m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -83921,7 +83917,7 @@ TilemapRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -83942,9 +83938,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -15395669
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -87931,18 +87927,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4028613953918517139, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4028613953918517139, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: 'm_ApplyToSortingLayers.Array.data[2]'
-      value: -1228124563
-      objectReference: {fileID: 0}
-    - target: {fileID: 5776298730398549911, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: damage
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5800886375067243501, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
       propertyPath: Ui
       value: 
@@ -87955,69 +87939,9 @@ PrefabInstance:
       propertyPath: gameoverPanel
       value: 
       objectReference: {fileID: 888982324}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 6140144934911503655, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
     - target: {fileID: 7801434187017420253, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7801434187017420253, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8653538750875549039, guid: aa74c419730e3cd4091964f65918ff7f, type: 3}
-      propertyPath: m_FlipX
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

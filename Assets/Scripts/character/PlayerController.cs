@@ -85,7 +85,17 @@ public class PlayerController : MonoBehaviour
         if (canAttack)
         {
             animator.SetTrigger("attack");
+            animator.SetInteger("attackIndex", 0);
         }    
+    }
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (!canAttack) return;
+            animator.SetTrigger("attack");
+            animator.SetInteger("attackIndex", 1);
+        }
     }
     public void SwordAttack()
     {

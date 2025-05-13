@@ -52,22 +52,4 @@ public class SwordAttack : MonoBehaviour
             
         }
     }
-    private void setHealhText()
-    {
-        RectTransform textTransform = Instantiate(healthText).GetComponent<RectTransform>();
-        textTransform.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        Canvas canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
-        textTransform.SetParent(canvas.transform);
-    }
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.collider.tag == "Enemy"){
-    //        Enemy enemy = collision.collider.GetComponent<Enemy>();
-    //        if (enemy != null)
-    //        {
-    //            Debug.Log("dealing dmg");
-    //            enemy.Health -= damage;
-    //        }
-    //    }
-    //}
 }
